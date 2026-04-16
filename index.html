@@ -1,0 +1,147 @@
+<script>
+
+let teams = {
+
+MI: [
+{name:"R Sharma",power:8,timing:7,luck:6},
+{name:"I Kishan",power:7,timing:6,luck:6},
+{name:"S Yadav",power:9,timing:8,luck:6},
+{name:"T Varma",power:6,timing:7,luck:6},
+{name:"H Pandya",power:9,timing:6,luck:7},
+{name:"T David",power:9,timing:5,luck:6},
+{name:"R Shepherd",power:8,timing:5,luck:6},
+{name:"P Chawla",power:5,timing:6,luck:7},
+{name:"J Bumrah",power:4,timing:5,luck:9},
+{name:"G Coetzee",power:6,timing:5,luck:6},
+{name:"A Madhwal",power:5,timing:5,luck:6}
+],
+
+CSK: [
+{name:"R Gaikwad",power:7,timing:8,luck:6},
+{name:"D Conway",power:7,timing:7,luck:6},
+{name:"S Dube",power:9,timing:6,luck:6},
+{name:"R Jadeja",power:7,timing:7,luck:8},
+{name:"M Ali",power:8,timing:6,luck:7},
+{name:"M Dhoni",power:8,timing:9,luck:9},
+{name:"D Mitchell",power:7,timing:6,luck:6},
+{name:"D Chahar",power:5,timing:5,luck:7},
+{name:"M Pathirana",power:4,timing:5,luck:8},
+{name:"T Deshpande",power:5,timing:5,luck:6},
+{name:"S Theekshana",power:4,timing:6,luck:7}
+],
+
+RCB: [
+{name:"V Kohli",power:8,timing:9,luck:7},
+{name:"F du Plessis",power:8,timing:7,luck:6},
+{name:"G Maxwell",power:9,timing:6,luck:7},
+{name:"R Patidar",power:7,timing:7,luck:6},
+{name:"D Karthik",power:7,timing:6,luck:7},
+{name:"C Green",power:8,timing:6,luck:6},
+{name:"M Lomror",power:6,timing:6,luck:6},
+{name:"K Sharma",power:5,timing:5,luck:6},
+{name:"M Siraj",power:4,timing:5,luck:8},
+{name:"R Topley",power:5,timing:5,luck:7},
+{name:"A Deep",power:5,timing:5,luck:6}
+],
+
+KKR: [
+{name:"S Iyer",power:7,timing:8,luck:6},
+{name:"R Gurbaz",power:7,timing:6,luck:6},
+{name:"A Russell",power:10,timing:5,luck:8},
+{name:"N Rana",power:7,timing:7,luck:6},
+{name:"R Singh",power:8,timing:7,luck:7},
+{name:"V Iyer",power:7,timing:6,luck:6},
+{name:"S Narine",power:6,timing:5,luck:8},
+{name:"M Starc",power:5,timing:5,luck:8},
+{name:"H Rana",power:5,timing:5,luck:6},
+{name:"V Chakravarthy",power:4,timing:6,luck:7},
+{name:"C Sakariya",power:5,timing:5,luck:6}
+],
+
+SRH: [
+{name:"A Sharma",power:7,timing:6,luck:6},
+{name:"T Head",power:9,timing:7,luck:6},
+{name:"H Klaasen",power:9,timing:7,luck:7},
+{name:"M Markram",power:7,timing:7,luck:6},
+{name:"A Samad",power:8,timing:5,luck:6},
+{name:"W Jansen",power:7,timing:5,luck:7},
+{name:"P Cummins",power:6,timing:6,luck:8},
+{name:"B Kumar",power:5,timing:6,luck:8},
+{name:"T Natarajan",power:4,timing:5,luck:8},
+{name:"M Markande",power:4,timing:5,luck:7},
+{name:"F Farooqi",power:4,timing:5,luck:7}
+],
+
+RR: [
+{name:"S Samson",power:8,timing:8,luck:6},
+{name:"Y Jaiswal",power:8,timing:7,luck:6},
+{name:"J Buttler",power:9,timing:8,luck:7},
+{name:"R Parag",power:7,timing:6,luck:6},
+{name:"D Jurel",power:7,timing:6,luck:6},
+{name:"S Hetmyer",power:9,timing:6,luck:7},
+{name:"R Ashwin",power:6,timing:6,luck:8},
+{name:"T Boult",power:5,timing:5,luck:8},
+{name:"A Khan",power:4,timing:5,luck:7},
+{name:"Y Chahal",power:4,timing:6,luck:8},
+{name:"S Sharma",power:5,timing:5,luck:6}
+],
+
+DC: [
+{name:"D Warner",power:8,timing:8,luck:6},
+{name:"P Shaw",power:8,timing:6,luck:6},
+{name:"R Pant",power:9,timing:7,luck:7},
+{name:"T Stubbs",power:8,timing:6,luck:6},
+{name:"A Porel",power:6,timing:6,luck:6},
+{name:"M Marsh",power:8,timing:6,luck:6},
+{name:"L Yadav",power:6,timing:6,luck:7},
+{name:"A Patel",power:7,timing:6,luck:8},
+{name:"K Yadav",power:4,timing:5,luck:8},
+{name:"I Sharma",power:4,timing:5,luck:8},
+{name:"A Nortje",power:5,timing:5,luck:7}
+],
+
+PBKS: [
+{name:"S Dhawan",power:7,timing:8,luck:6},
+{name:"J Bairstow",power:9,timing:7,luck:6},
+{name:"L Livingstone",power:10,timing:6,luck:7},
+{name:"S Curran",power:8,timing:6,luck:7},
+{name:"J Sharma",power:7,timing:6,luck:6},
+{name:"S Khan",power:8,timing:5,luck:6},
+{name:"H Brar",power:6,timing:6,luck:7},
+{name:"K Rabada",power:5,timing:5,luck:8},
+{name:"A Singh",power:4,timing:5,luck:8},
+{name:"R Chahar",power:4,timing:6,luck:7},
+{name:"H Patel",power:5,timing:5,luck:7}
+],
+
+GT: [
+{name:"S Gill",power:8,timing:9,luck:6},
+{name:"W Saha",power:7,timing:7,luck:6},
+{name:"D Miller",power:9,timing:6,luck:7},
+{name:"S Sudharsan",power:7,timing:7,luck:6},
+{name:"R Tewatia",power:8,timing:6,luck:7},
+{name:"A Omarzai",power:7,timing:6,luck:6},
+{name:"R Khan",power:6,timing:6,luck:9},
+{name:"M Shami",power:5,timing:5,luck:9},
+{name:"M Siraj",power:4,timing:5,luck:8},
+{name:"N Ahmad",power:4,timing:5,luck:8},
+{name:"U Yadav",power:5,timing:5,luck:7}
+],
+
+LSG: [
+{name:"K Rahul",power:7,timing:8,luck:6},
+{name:"Q de Kock",power:8,timing:7,luck:6},
+{name:"M Stoinis",power:9,timing:6,luck:7},
+{name:"N Pooran",power:10,timing:6,luck:7},
+{name:"A Badoni",power:7,timing:6,luck:6},
+{name:"K Pandya",power:7,timing:6,luck:7},
+{name:"D Hooda",power:7,timing:6,luck:6},
+{name:"R Bishnoi",power:4,timing:5,luck:8},
+{name:"M Yadav",power:5,timing:5,luck:8},
+{name:"N Haq",power:5,timing:5,luck:7},
+{name:"Y Thakur",power:5,timing:5,luck:6}
+]
+
+};
+
+</script>
